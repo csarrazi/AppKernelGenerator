@@ -1,0 +1,3 @@
+_generator:
+    pattern:  /generator
+    defaults: { _controller: SensioDynamicBundlesBundle:Generator:index }

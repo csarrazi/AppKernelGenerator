@@ -10,14 +10,14 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class AppKernelGenerator extends Generator
 {
-    public function __construct(Filesystem $filesystem, $skeletonDir)
+    public function __construct(Filesystem $filesystem)
     {
         $this->filesystem = $filesystem;
-        $this->skeletonDir = $skeletonDir;
+        $this->skeletonDir = __DIR__.'/../Resources/skeleton';
     }
 
-    public function generate(array $bundles, $dir)
+    public function generate(array $params, $dir)
     {
-        $this->renderFile($this->skeletonDir, 'AppKernel.php.twig', $dir.'/app/AppKernel.php', array('bundles' => $bundles));
+        $this->renderFile($this->skeletonDir, 'AppKernel.php.twig', $dir.'/app/AppKernel.php', $params);
     }
 }
