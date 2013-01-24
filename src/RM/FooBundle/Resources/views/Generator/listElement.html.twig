@@ -1,0 +1,10 @@
+{% macro listElement(element) %}
+<div class="myElement">{{ element }}</div>
+<a href="#">Link to my element</a>
+{% endmacro %}
+
+{% import _self as macros %}
+
+{% block myElement %}
+<li>{{ macros.listElement('Element 1') }}</li>
+{% endblock %}

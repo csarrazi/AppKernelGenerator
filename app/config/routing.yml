@@ -1,3 +1,13 @@
 _generator:
     pattern:  /generator
     defaults: { _controller: SensioDynamicBundlesBundle:Generator:index }
+    
+_foo:
+    resource: '@RMFooBundle/Resources/config/routing.xml'
+
+_bar:
+    resource: '@RMBarBundle/Resources/config/routing.xml'
+
+_ipsum:
+    pattern:  /ipsum
+    defaults: { _controller: RMIpsumBundle:Default:index }

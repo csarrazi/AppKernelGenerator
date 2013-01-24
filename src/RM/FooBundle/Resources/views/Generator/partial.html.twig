@@ -1,0 +1,5 @@
+{% import 'RMFooBundle:Generator:listElement.html.twig' as macros %}
+
+{% block myElement %}
+<li>{{ macros.listElement('Element '~ i) }}</li>
+{% endblock %}

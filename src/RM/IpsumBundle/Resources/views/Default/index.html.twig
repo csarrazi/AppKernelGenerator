@@ -1,0 +1,5 @@
+{% extends 'RMFooBundle:Generator:index.html.twig' %}
+{% use 'RMBarBundle:Generator:button.html.twig' %}
+{% block myElement %}
+{{ parent() }} {{ block('myButton')}}
+{% endblock %}

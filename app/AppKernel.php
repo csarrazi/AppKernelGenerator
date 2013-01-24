@@ -20,6 +20,9 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Sensio\DynamicBundlesBundle\SensioDynamicBundlesBundle(),
+            new RM\FooBundle\RMFooBundle(),
+            new RM\IpsumBundle\RMIpsumBundle(),
+            new RM\BarBundle\RMBarBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

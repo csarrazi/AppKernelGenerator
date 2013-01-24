@@ -1,0 +1,5 @@
+<ul>
+{% for i in 1..5 %}    
+    {% block myElement %}{% include 'RMFooBundle:Generator:partial.html.twig' with { 'index': i }%}{% endblock %}
+{% endfor %}
+</ul>

@@ -42,8 +42,10 @@ class GeneratorController extends \Symfony\Bundle\FrameworkBundle\Controller\Con
         $p = $pb->getProcess();
         
         $p->run();
-        
-        die($p->getOutput());
+         $this->get('session')->setFlash(
+            'notice',
+            $p->getOutput()
+        );
       }
     }
     
