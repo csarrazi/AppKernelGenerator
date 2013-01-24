@@ -18,6 +18,6 @@ class AppKernelGenerator extends Generator
 
     public function generate(array $bundles, $dir)
     {
-        $this->renderFile($this->skeletonDir, 'AppKernel.php', $dir.'/app/AppKernel.php', array('bundles' => $bundles));
+        $this->renderFile($this->skeletonDir, 'AppKernel.php.twig', $dir.'/app/AppKernel.php', array('bundles' => $bundles));
     }
 }
